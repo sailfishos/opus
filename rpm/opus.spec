@@ -1,9 +1,9 @@
 Name:     opus
 Summary:  An audio codec for use in low-delay speech and audio communication
-Version:  1.5.1
+Version:  1.6.1
 Release:  1
 License:  BSD
-URL:      https://www.opus-codec.org/
+URL:      https://github.com/sailfishos/opus
 Source:   %{name}-%{version}.tar.gz
 
 %description
@@ -50,12 +50,10 @@ EOF
 %postun -n %{name} -p /sbin/ldconfig
 
 %files
-%defattr(-,root,root)
 %license COPYING
 %{_libdir}/libopus.so.*
 
 %files devel
-%defattr(-,root,root)
 %doc README
 %{_includedir}/opus
 %{_libdir}/libopus.so
